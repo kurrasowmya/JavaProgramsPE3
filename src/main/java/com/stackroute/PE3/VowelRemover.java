@@ -3,19 +3,16 @@ package com.stackroute.PE3;
 public class VowelRemover {
     public String vowelRemover(String input)
     {
-        String outp="";
+        String output="";
         for(int i=0;i<input.length();i++)
         {
             if(input.charAt(i)=='a'||input.charAt(i)=='e'||input.charAt(i)=='i'||input.charAt(i)=='o'||input.charAt(i)=='u')
             {
                 continue;
             }
-            outp=outp+input.charAt(i);
+            output=output+input.charAt(i);
         }
-        System.out.println("---------------");
-        System.out.println(outp);
-        System.out.println("---------------");
-        return outp;
+        return output;
     }
 }
 

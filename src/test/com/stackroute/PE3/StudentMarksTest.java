@@ -7,26 +7,28 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class StudentMarksTest {
-    StudentMarks ob=new StudentMarks();
+    StudentMarks obj;
 
     @Before
     public void setUp() throws Exception {
+        obj=new StudentMarks();
     }
 
     @After
     public void tearDown() throws Exception {
+        obj=null;
     }
 
     @Test
-    public void checsValidkMarks() {
-        int[] marks={12,43,32,87};
-        int res=ob.checkMarks(4,marks);
+    public void givenmarksandnumbermatchesSoitreturnsone() {
+        int[] marks={12,56,83,45,36};
+        int res=obj.checkMarks(5,marks);
         assertEquals(1,res);
     }
     @Test
-    public void checsInalidkMarks() {
-        int[] marks={123,43,32,87};
-        int res=ob.checkMarks(4,marks);
+    public void givenmarksexceedsTheRangeSoitShouldReturnZero() {
+        int[] marks={36,1065,56};
+        int res=obj.checkMarks(3,marks);
         assertEquals(0,res);
     }
 }

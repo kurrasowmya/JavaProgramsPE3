@@ -3,23 +3,18 @@ package com.stackroute.PE3;
 public class MatrixSum {
     public String matrixSum(int row,int column,int[][] matrix1, int[][] matrix2)
     {
-        int counter1,counter2,sum=0;
-        String outp="";
-        System.out.println("--------------------------");
-        System.out.println("Sum is");
-        System.out.println("--------------------------");
-        for(counter1=0;counter1<row;counter1++)
+        int i,j,sum=0;
+        String output="";
+        for(i=0;i<row;i++)
         {
-            for(counter2=0;counter2<column;counter2++)
+            for(j=0;j<column;j++)
             {
-                sum=sum+matrix1[counter1][counter2]+matrix2[counter1][counter2];
-                System.out.print(sum+" ");
-                outp=outp+sum+ " ";
+                sum=sum+matrix1[i][j]+matrix2[i][j];
+                output=output+sum+ " ";
             }
-            System.out.println();
-            outp=outp+"\n";
+            output=output+"\n";
             sum=0;
         }
-        return outp;
+        return output;
     }
 }

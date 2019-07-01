@@ -7,25 +7,37 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ConsecutiveCheckerTest {
-    ConsecutiveChecker ob = new ConsecutiveChecker();
+    ConsecutiveChecker obj;
 
     @Before
     public void setUp() throws Exception {
+        obj= new ConsecutiveChecker();
     }
 
     @After
     public void tearDown() throws Exception {
+        obj=null;
     }
 
     @Test
-    public void TestNonConsecutiveChecker() {
-        String res = ob.consecutiveChecker(23456372);
-        assertEquals("23456372 doesn't contains consecutive numbers", res);
+    public void givennonconsecutiveIntegerIsCheckedNumberbyNumberandStringisReturnesWithMessage() {
+        String res = obj.consecutiveChecker(8643);
+        assertEquals("doesn't contains consecutive numbers", res);
     }
 
     @Test
-    public void TestConsecutiveChecker() {
-        String res = ob.consecutiveChecker(9876543);
-        assertEquals("9876543 contains consecutive numbers", res);
+    public void givenconsecutiveIntegerIsCheckedNumberbyNumberandStringisReturnesWithMessage() {
+        String res = obj.consecutiveChecker(12345);
+        assertEquals("contains consecutive numbers", res);
+    }
+    @Test
+    public void givenZerovalueisCheckesNumberbyNumbersandMessageisReturned() {
+        String res = obj.consecutiveChecker(0);
+        assertEquals("invalid data", res);
+    }
+    @Test
+    public void givennNegativeIntegerisCheckesNumberbyNumbersandMessageisReturned() {
+        String res = obj.consecutiveChecker(-34);
+        assertEquals("invalid data", res);
     }
 }

@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ChessBoardTest {
-    ChessBoard ob=new ChessBoard();
+    ChessBoard obj = new ChessBoard();
 
 
     @org.junit.Before
@@ -19,18 +19,23 @@ public class ChessBoardTest {
     }
 
 
+    @Test
+    public void givenNumberofChecksvalueisTakenAndthepatternStringIsreturned() {
+        String res = obj.chessBoardPattern(8);
+        assertEquals("WW|BB|WW|BB|WW|BB|WW|BB|\n" +
+                "BB|WW|BB|WW|BB|WW|BB|WW|\n" +
+                "WW|BB|WW|BB|WW|BB|WW|BB|\n" +
+                "BB|WW|BB|WW|BB|WW|BB|WW|\n" +
+                "WW|BB|WW|BB|WW|BB|WW|BB|\n" +
+                "BB|WW|BB|WW|BB|WW|BB|WW|\n" +
+                "WW|BB|WW|BB|WW|BB|WW|BB|\n" +
+                "BB|WW|BB|WW|BB|WW|BB|WW|\n", res);
 
-        @Test
-        public void chessBoardPattern() {
-            String res=ob.chessBoardPattern();
-            assertEquals("WW|BB|WW|BB|WW|BB|WW|BB|\n" +
-                    "BB|WW|BB|WW|BB|WW|BB|WW|\n" +
-                    "WW|BB|WW|BB|WW|BB|WW|BB|\n" +
-                    "BB|WW|BB|WW|BB|WW|BB|WW|\n" +
-                    "WW|BB|WW|BB|WW|BB|WW|BB|\n" +
-                    "BB|WW|BB|WW|BB|WW|BB|WW|\n" +
-                    "WW|BB|WW|BB|WW|BB|WW|BB|\n" +
-                    "BB|WW|BB|WW|BB|WW|BB|WW|\n",res);
-
-        }
     }
+
+    @Test
+    public void givennumberIsZeroAndItShoulsReturn() {
+        String res = obj.chessBoardPattern(0);
+        assertEquals(null, res);
+    }
+}

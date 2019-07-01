@@ -8,7 +8,6 @@ public class StudentMarks {
         {
             if(marks[i]<0||marks[i]>100)
             {
-                System.out.println("Invalid Input");
                 return 0;
             }
         }

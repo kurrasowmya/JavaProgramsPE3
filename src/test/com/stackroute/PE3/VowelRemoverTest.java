@@ -7,28 +7,29 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class VowelRemoverTest {
-    VowelRemover ob=new VowelRemover();
+    VowelRemover obj;
 
     @Before
     public void setUp() throws Exception {
+        obj=new VowelRemover();
     }
 
     @After
     public void tearDown() throws Exception {
     }
     @Test
-    public void vowelRemover1(){
-        String res=ob.vowelRemover("India");
-        assertEquals("Ind",res);
+    public void givenStringisconsideredAndVowelsAreRemoved(){
+        String res=obj.vowelRemover("java");
+        assertEquals("jv",res);
     }
     @Test
-    public void vowelRemover2(){
-        String res=ob.vowelRemover("United States");
-        assertEquals("Untd Stts",res);
+    public void givenStringWithSpaceIsConsideredAndVowelsAreRemoved(){
+        String res=obj.vowelRemover("all well");
+        assertEquals("ll wll",res);
     }
     @Test
-    public void vowelRemover3(){
-        String res=ob.vowelRemover("Germany");
-        assertEquals("Grmny",res);
+    public void GivenStringwithAllVowelsIsconsideredAndNullStringIsReturned(){
+        String res=obj.vowelRemover("aeiou");
+        assertEquals("",res);
     }
 }
