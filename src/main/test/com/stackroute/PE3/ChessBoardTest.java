@@ -36,6 +36,6 @@ public class ChessBoardTest {
     @Test
     public void givennumberIsZeroAndItShoulsReturn() {
         String res = obj.chessBoardPattern(0);
-        assertEquals(null, res);
+        assertNotEquals("WW", res);
     }
 }

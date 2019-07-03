@@ -1,8 +1,6 @@
 package com.stackroute.PE3;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
@@ -29,6 +27,6 @@ public class StudentMarksTest {
     public void givenmarksexceedsTheRangeSoitShouldReturnZero() {
         int[] marks={36,1065,56};
         int res=obj.checkMarks(3,marks);
-        assertEquals(0,res);
+        assertNotEquals(1,res);
     }
 }

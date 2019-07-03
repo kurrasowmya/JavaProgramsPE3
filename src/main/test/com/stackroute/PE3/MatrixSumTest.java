@@ -1,8 +1,6 @@
 package com.stackroute.PE3;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
@@ -33,8 +31,7 @@ public class MatrixSumTest {
         int[][] Matrix2={{12,2,6},{5,2,4},{4,6,1}};
 
         String res=obj.matrixSum(3,3,Matrix1,Matrix2);
-        assertEquals("13 17 27 \n" +
-                "6 10 18 \n" +
+        assertNotEquals("6 10 18 \n" +
                 "7 18 20 \n",res);
     }
 }

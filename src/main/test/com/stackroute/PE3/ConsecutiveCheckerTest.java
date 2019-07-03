@@ -1,8 +1,6 @@
 package com.stackroute.PE3;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
@@ -38,6 +36,6 @@ public class ConsecutiveCheckerTest {
     @Test
     public void givennNegativeIntegerisCheckesNumberbyNumbersandMessageisReturned() {
         String res = obj.consecutiveChecker(-34);
-        assertEquals("invalid data", res);
+        assertNotEquals("data", res);
     }
 }
